@@ -35,7 +35,6 @@ pub enum AST {
     Char(char),
     Plus(Box<AST>),
     Star(Box<AST>),
-    Questiong(Box<AST>),
     Question(Box<AST>),
     Or(Box<AST>, Box<AST>),
     Seq(Vec<AST>),
@@ -49,6 +48,12 @@ fn parse_escape(pos: usize, c: char) -> Result<AST, ParseError> {
             Err(err)
         }
     }
+}
+
+enum PSQ {
+    Plus,
+    Star,
+    Question,
 }
 
 mod test {
