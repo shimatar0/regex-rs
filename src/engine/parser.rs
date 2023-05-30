@@ -36,6 +36,7 @@ pub enum AST {
     Plus(Box<AST>),
     Star(Box<AST>),
     Questiong(Box<AST>),
+    Question(Box<AST>),
     Or(Box<AST>, Box<AST>),
     Seq(Vec<AST>),
 }
